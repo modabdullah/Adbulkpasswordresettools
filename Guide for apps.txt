@@ -1,0 +1,22 @@
+1. unzip the Bulk Password reset file
+2. open the exe file 
+3. select the domain
+4. change the credentials if required
+5. select the OU for reseting the password
+6. Search the SAM, Name, UPN for single user. 
+7. user will auto select in grid. 
+8. type password and confirm password.
+9. Reset password for Selected user
+
+
+for Bulk Reset. skip number 6 - 9
+
+10. browse or export the CSV file file attached with zip. or you can created new csv file but a column need to be SamAccountName. 
+11. Type a password for all bulk user. 
+12. run bulk password reset. 
+13. If required export the result. 
+
+
+enjoy the apps. 
+
+
