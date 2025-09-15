@@ -1,27 +1,55 @@
-1. unzip the Bulk Password reset file.
-2. Run the Ps1. file in any edit mode. edit the domain name on the line 394 to your domain. 
-3. open the powershell as administrator. Invoke-PS2EXE -InputFile "\path\to\file\BulkPasswordReset-final.ps1" -OutputFile "\path\to\file\BulkPasswordReset.exe"
+🔧 Setup: Preparing the Application
 
-Change the path if required.
+Before using the tool, you must first configure and create the executable file.
 
-2. Open the exe file 
-3. Select the domain
-4. Change the credentials if required
-5. Select the OU for resetting the password
-6. Search the SAM, Name, UPN for a single user. 
-7. The user will auto-select in the grid. 
-8. Type the password and confirm the password.
-9. Reset password for selected user
+    Unzip the Bulk Password Reset file to a folder on your computer.
 
+    Open the PowerShell script, BulkPasswordReset-final.ps1, using any text editor (like Notepad, VS Code, etc.).
 
-for Bulk Reset. skip number 6 - 9
+    Go to line 394 and change the placeholder domain name to your actual domain name. Save the file.
 
-10. Browse or export the CSV file attached with a zip. Or you can create a new CSV file, but a column needs to be SamAccountName. 
-11. Type a password for all bulk users. 
-12. Run bulk password reset. for Bulk user the must password change for next log on will autosave.
-13. If required, export the result. 
+    Open PowerShell as an Administrator.
+
+    Run the following command to create the executable (.exe) file. Make sure to replace the example paths with the actual file path on your system:
+
+        Invoke-PS2EXE -InputFile "C:\path\to\your\file\BulkPasswordReset-final.ps1" -OutputFile "C:\path\to\your\file\BulkPasswordReset.exe"
 
 
-Enjoy the apps. 
+Resetting a Single User's Password
+
+    Open the BulkPasswordReset.exe application you just created.
+
+    Select your domain from the dropdown menu.
+
+    Change the credentials if required.
+
+    Select the OU (Organisational Unit) where the user account is located.
+
+    Search for the user by their SAM Account Name, Display Name, or UPN. The user will be automatically highlighted in the list.
+
+    Type the new password and then confirm it.
+
+    Click Reset Password to update the password for the selected user.
 
 
+Resetting Passwords in Bulk
+
+    Open the BulkPasswordReset.exe application.
+
+    Select your domain and change credentials if needed.
+
+    Prepare your user list in a CSV file. You can use the sample provided in the zip file or create a new one.
+
+        Important: The CSV file must contain a column with the header SamAccountName.
+
+    Click Browse to select your CSV user list.
+
+    Enter the new password that will be set for all users in the file.
+
+    Click Run Bulk Password Reset.
+
+        Note: The "User must change password at next logon" option is automatically enabled for all users processed in bulk.
+
+    Once finished, you can export the Result if you need a log of the changes.
+
+Enjoy the app! 🎉
